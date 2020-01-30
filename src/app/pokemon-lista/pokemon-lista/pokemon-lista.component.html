@@ -1,0 +1,11 @@
+<div class="container-list">
+<mat-toolbar *ngFor="let pokemon of pokemons" [routerLink]="['/details', pokemon.id]">
+  <mat-toolbar-row>#{{pokemon.id}} {{pokemon.formattedName()}}</mat-toolbar-row>
+
+  <div class="img-container">
+    <img src="{{pokemon.image()}}" alt="{{pokemon.formattedName()}}" md-card-lg-image>
+  </div>
+
+</mat-toolbar>
+
+</div>

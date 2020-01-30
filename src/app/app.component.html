@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">
+  <span [routerLink]="['']">Pokemon TCG</span>
+</mat-toolbar>
+<router-outlet></router-outlet>
+
+
+<div class="container">
+  <nav>
+  <a routerLink="/pokemon-lista" routerLinkActive="active">Pokemon Lista</a>
+  <a routerLink="/details/:id" routerLinkActive="active">Pokemon Detalhe</a>
+  </nav>
+  <router-outlet></router-outlet>
+  </div>

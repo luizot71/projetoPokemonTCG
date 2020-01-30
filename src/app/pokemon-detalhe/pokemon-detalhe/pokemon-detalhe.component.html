@@ -1,0 +1,26 @@
+<div class="container-detail">
+  <div *ngIf="pokemon.name" class="details-container">
+    <img src="{{pokemon.image()}}" alt="{{pokemon.name}}" class="detail-image">
+
+    <mat-tab-group>
+
+      <mat-tab label="Types">
+
+      <mat-chip-list>
+        <mat-chip *ngFor="let type of pokemon.types" color="accent" selected="true">{{type | uppercase}}</mat-chip>
+      </mat-chip-list>
+
+      </mat-tab>
+      <mat-tab label="Stats">
+        <mat-list>
+          <mat-list-item *ngFor="let stat of pokemon.stats">
+            <mat-icon md-list-icon color="primary">done</mat-icon>
+            <h4 md-line>{{stat.name | uppercase}}: <mat-chip color="accent" selected="true">{{stat.value}}</mat-chip></h4>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+        </mat-list>
+      </mat-tab>
+
+    </mat-tab-group>
+  </div>
+</div>
